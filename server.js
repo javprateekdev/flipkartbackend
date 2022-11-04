@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use('/',Router);
-dotenv.config();
+
 const USERNAME=process.env.DB_USERNAME;
 const PASSWORD=process.env.DB_PASSWORD;
 const URL= process.env.MONGODB_URI ||`mongodb://${USERNAME}:${PASSWORD}@ac-yc54mlb-shard-00-00.iadr3gw.mongodb.net:27017,ac-yc54mlb-shard-00-01.iadr3gw.mongodb.net:27017,ac-yc54mlb-shard-00-02.iadr3gw.mongodb.net:27017/?ssl=true&replicaSet=atlas-upvsvy-shard-0&authSource=admin&retryWrites=true&w=majority`;
